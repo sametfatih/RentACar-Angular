@@ -1,0 +1,28 @@
+<div *ngIf="dataLoaded==false" class="text-center">
+    <div class="spinner-border m-4" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<div *ngIf="dataLoaded==true" class="container">
+    <h3 class="text-center mt-3">Customers</h3>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Company Name</th>
+                <th>Email</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{customer.id}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.companyName}}</td>
+                <td>{{customer.email}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
