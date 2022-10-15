@@ -1,0 +1,17 @@
+<div class="container text-center">
+    <div>
+        <h3>{{car.brand}} {{car.model}}</h3>
+    </div>
+    <div>
+        <label><b style="margin-right: 5px;">Color: </b>{{car.color}}</label>
+    </div>
+    <div>
+        <label><b style="margin-right: 5px;">Model Year: </b>{{car.modelYear}}</label>
+    </div>
+    <div>
+        <label><b style="margin-right: 5px;">Color: </b>{{car.color}}</label>
+    </div>
+    <div *ngFor="let carImage of carImages" class="container">
+        <img [src]="getCarImage(carImage)" class="img-fluid" alt="Image" />
+    </div>
+</div>

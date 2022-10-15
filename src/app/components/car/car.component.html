@@ -5,8 +5,7 @@
 </div>
 
 <div *ngIf="dataLoaded==true" class="container">
-<h3 class="text-center mt-3">Cars</h3>
-<table *ngIf="dataLoaded==true"class="table table-bordered">
+<table *ngIf="dataLoaded==true"class="table table-hover">
     <thead class="table-dark">
         <tr>
             <th>Id</th>
@@ -19,7 +18,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let car of cars">
+        <tr (click)="carDetails(car.carId)" *ngFor="let car of cars">
             <td>{{car.carId}}</td>
             <td>{{car.brand}}</td>
             <td>{{car.model}}</td>
